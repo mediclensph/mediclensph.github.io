@@ -180,9 +180,14 @@
             line-height: 1.5;
         }
 
-        /* Keywords hidden - for SEO only */
+        /* Keywords COMPLETELY HIDDEN - for SEO only, not visible */
         .product-keywords {
-            display: none;
+            display: none !important;
+            visibility: hidden;
+            height: 0;
+            width: 0;
+            overflow: hidden;
+            position: absolute;
         }
 
         .product-footer {
@@ -203,6 +208,7 @@
             font-size: 0.85rem;
             font-weight: 500;
             transition: opacity 0.2s;
+            display: inline-block;
         }
 
         .inquiry-btn:hover {
@@ -390,7 +396,6 @@
                 // Handle image path correctly
                 let imageSrc = '';
                 if (product.image) {
-                    // If image path already starts with 'images/', use as is, otherwise add 'images/'
                     imageSrc = product.image.startsWith('images/') ? product.image : 'images/' + product.image;
                 }
                 
@@ -406,8 +411,8 @@
                         <span class="product-category">${product.category}</span>
                         <h3 class="product-title">${product.title}</h3>
                         <p class="product-description">${product.description}</p>
-                        <!-- Keywords hidden - for SEO only, not visible to users -->
-                        <div class="product-keywords">
+                        <!-- Keywords are in the HTML for SEO but hidden with CSS -->
+                        <div class="product-keywords" style="display: none !important;">
                             ${product.keywords ? product.keywords.join(', ') : ''}
                         </div>
                         <div class="product-footer">
