@@ -180,19 +180,9 @@
             line-height: 1.5;
         }
 
+        /* Keywords hidden - for SEO only */
         .product-keywords {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .keyword {
-            background: #f1f5f9;
-            color: #2563eb;
-            font-size: 0.7rem;
-            padding: 0.2rem 0.6rem;
-            border-radius: 9999px;
+            display: none;
         }
 
         .product-footer {
@@ -408,19 +398,18 @@
                 <div class="product-card">
                     <div class="product-image">
                         ${imageSrc ? 
-                            `<img src="${imageSrc}" alt="${product.title}" onerror="this.parentElement.innerHTML='<span style=\"font-size: 4rem;\">${product.icon || '💊'}</span>'">` : 
-                            `<span style="font-size: 4rem;">${product.icon || '💊'}</span>`
+                            `<img src="${imageSrc}" alt="${product.title}" onerror="this.parentElement.innerHTML='<div style=\"font-size: 3rem; color: #2563eb;\">📦</div>'">` : 
+                            `<div style="font-size: 3rem; color: #2563eb;">📦</div>`
                         }
                     </div>
                     <div class="product-info">
                         <span class="product-category">${product.category}</span>
                         <h3 class="product-title">${product.title}</h3>
                         <p class="product-description">${product.description}</p>
-                        ${product.keywords ? `
-                            <div class="product-keywords">
-                                ${product.keywords.slice(0, 6).map(k => `<span class="keyword">${k.substring(0, 20)}${k.length > 20 ? '...' : ''}</span>`).join('')}
-                            </div>
-                        ` : ''}
+                        <!-- Keywords hidden - for SEO only, not visible to users -->
+                        <div class="product-keywords">
+                            ${product.keywords ? product.keywords.join(', ') : ''}
+                        </div>
                         <div class="product-footer">
                             <span class="price-tag">${product.price || 'Request Quote'}</span>
                             <a href="https://wa.me/+639458749129?text=Hello!%20I'm%20interested%20in%20${encodeURIComponent(product.title)}" 
@@ -431,6 +420,7 @@
             `}).join('');
         }
 
+        // Load products when page loads
         loadProducts();
     </script>
 </body>
