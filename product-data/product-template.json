@@ -1,0 +1,10 @@
+{
+    "id": "prod007",
+    "title": "Product Name Here",
+    "category": "Category Name",
+    "description": "Write a clear, detailed description of the product. Include key benefits and usage information.",
+    "keywords": ["keyword1", "keyword2", "keyword3"],
+    "image": "product-image-filename.jpg",
+    "icon": "💊",
+    "price": "₱XXX.00/unit"
+}
