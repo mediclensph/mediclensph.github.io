@@ -253,7 +253,7 @@
             color: #475569;
         }
 
-        /* Product Card (for latest products) */
+        /* Product Card (for latest products) - matching products.html style */
         .product-card {
             background: white;
             border-radius: 1rem;
@@ -261,25 +261,39 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             transition: all 0.3s ease;
             border: 1px solid #bae6fd;
+            display: flex;
+            flex-direction: column;
         }
 
         .product-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 25px -12px rgba(37, 99, 235, 0.15);
+            box-shadow: 0 20px 25px -12px rgba(37, 99, 235, 0.2);
             border-color: #7dd3fc;
         }
 
         .product-image {
-            height: 180px;
+            width: 100%;
+            height: 200px;
             background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 1rem;
         }
 
         .product-info {
             padding: 1.25rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .product-category {
@@ -290,20 +304,23 @@
             padding: 0.2rem 0.6rem;
             border-radius: 9999px;
             margin-bottom: 0.5rem;
+            align-self: flex-start;
         }
 
         .product-title {
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 700;
             color: #0c4a6e;
             margin-bottom: 0.5rem;
+            line-height: 1.3;
         }
 
         .product-description {
             color: #475569;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             margin-bottom: 0.75rem;
             line-height: 1.4;
+            flex: 1;
         }
 
         .product-footer {
@@ -318,7 +335,7 @@
         .price {
             color: #2563eb;
             font-weight: 700;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
         }
 
         /* FAQ Section */
@@ -788,13 +805,13 @@
             contactSection.scrollIntoView({ behavior: 'smooth' });
         });
 
-        // Load latest 3 products from JSON
+        // Load latest 3 products from JSON - matching products.html style
         async function loadLatestProducts() {
             try {
                 const response = await fetch('product-data/products.json');
                 if (!response.ok) throw new Error('Failed to load products');
                 const allProducts = await response.json();
-                // Get latest 3 products (last 3 in array or first 3 depending on your data)
+                // Get latest 3 products (last 3 in array)
                 const latestProducts = allProducts.slice(-3).reverse();
                 renderLatestProducts(latestProducts);
             } catch (error) {
@@ -810,10 +827,20 @@
                 return;
             }
             
-            grid.innerHTML = products.map(product => `
+            grid.innerHTML = products.map(product => {
+                // Handle image path correctly - same as products.html
+                let imageSrc = '';
+                if (product.image) {
+                    imageSrc = product.image.startsWith('images/') ? product.image : 'images/' + product.image;
+                }
+                
+                return `
                 <div class="product-card">
                     <div class="product-image">
-                        ${product.icon ? `<span style="font-size: 3rem;">${product.icon}</span>` : '💊'}
+                        ${imageSrc ? 
+                            `<img src="${imageSrc}" alt="${product.title}">` : 
+                            ''
+                        }
                     </div>
                     <div class="product-info">
                         <span class="product-category">${product.category || 'Healthcare'}</span>
@@ -826,7 +853,7 @@
                         </div>
                     </div>
                 </div>
-            `).join('');
+            `}).join('');
         }
 
         // FAQ Accordion
