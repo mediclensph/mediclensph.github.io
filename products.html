@@ -126,6 +126,8 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             transition: all 0.3s ease;
             border: 1px solid #bae6fd;
+            display: flex;
+            flex-direction: column;
         }
 
         .product-card:hover {
@@ -142,6 +144,7 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
+            flex-shrink: 0;
         }
 
         .product-image img {
@@ -153,6 +156,9 @@
 
         .product-info {
             padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .product-title {
@@ -171,6 +177,7 @@
             padding: 0.25rem 0.75rem;
             border-radius: 9999px;
             margin-bottom: 0.75rem;
+            align-self: flex-start;
         }
 
         .product-description {
@@ -178,16 +185,12 @@
             font-size: 0.9rem;
             margin-bottom: 1rem;
             line-height: 1.5;
+            flex: 1;
         }
 
-        /* Keywords COMPLETELY HIDDEN - for SEO only, not visible */
+        /* Keywords COMPLETELY HIDDEN - for SEO only */
         .product-keywords {
             display: none !important;
-            visibility: hidden;
-            height: 0;
-            width: 0;
-            overflow: hidden;
-            position: absolute;
         }
 
         .product-footer {
@@ -403,16 +406,16 @@
                 <div class="product-card">
                     <div class="product-image">
                         ${imageSrc ? 
-                            `<img src="${imageSrc}" alt="${product.title}" onerror="this.parentElement.innerHTML='<div style=\"font-size: 3rem; color: #2563eb;\">📦</div>'">` : 
-                            `<div style="font-size: 3rem; color: #2563eb;">📦</div>`
+                            `<img src="${imageSrc}" alt="${product.title}">` : 
+                            ''
                         }
                     </div>
                     <div class="product-info">
                         <span class="product-category">${product.category}</span>
                         <h3 class="product-title">${product.title}</h3>
                         <p class="product-description">${product.description}</p>
-                        <!-- Keywords are in the HTML for SEO but hidden with CSS -->
-                        <div class="product-keywords" style="display: none !important;">
+                        <!-- Keywords hidden for SEO only -->
+                        <div class="product-keywords">
                             ${product.keywords ? product.keywords.join(', ') : ''}
                         </div>
                         <div class="product-footer">
