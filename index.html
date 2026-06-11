@@ -109,7 +109,25 @@
             box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
         }
 
-        /* Hero Section with Background Image & Overlay */
+        .btn-outline {
+            background: transparent;
+            color: #2563eb;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: 500;
+            border: 2px solid #2563eb;
+            transition: all 0.2s ease;
+            display: inline-block;
+            font-size: 0.85rem;
+        }
+
+        .btn-outline:hover {
+            background: #2563eb;
+            color: white;
+        }
+
+        /* Hero Section */
         .hero {
             position: relative;
             min-height: 90vh;
@@ -125,7 +143,6 @@
             overflow: hidden;
         }
 
-        /* Dark overlay for better text readability */
         .hero-overlay {
             position: absolute;
             top: 0;
@@ -158,7 +175,6 @@
             opacity: 0.95;
         }
 
-        /* Optional fade-in animation */
         .hero-content {
             animation: fadeInUp 0.8s ease-out;
         }
@@ -237,6 +253,127 @@
             color: #475569;
         }
 
+        /* Product Card (for latest products) */
+        .product-card {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border: 1px solid #bae6fd;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -12px rgba(37, 99, 235, 0.15);
+            border-color: #7dd3fc;
+        }
+
+        .product-image {
+            height: 180px;
+            background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .product-info {
+            padding: 1.25rem;
+        }
+
+        .product-category {
+            display: inline-block;
+            background: #e0f2fe;
+            color: #1e40af;
+            font-size: 0.7rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 9999px;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0c4a6e;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-description {
+            color: #475569;
+            font-size: 0.85rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .price {
+            color: #2563eb;
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+
+        /* FAQ Section */
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 1rem;
+            margin-bottom: 1rem;
+            border: 1px solid #bae6fd;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.25rem 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #1e3a8a;
+            transition: background 0.2s;
+        }
+
+        .faq-question:hover {
+            background: #f0f9ff;
+        }
+
+        .faq-question .icon {
+            font-size: 1.25rem;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question .icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            color: #475569;
+            border-top: 0px solid #e2e8f0;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding: 0 1.5rem 1.25rem 1.5rem;
+            border-top-width: 1px;
+        }
+
         /* About Section */
         .about-section {
             background: white;
@@ -275,7 +412,7 @@
             color: #2563eb;
         }
 
-        /* Contact Info & Map Section */
+        /* Contact Section */
         .contact-map-section {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -309,7 +446,6 @@
             color: #2563eb;
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.2s;
         }
 
         .contact-detail a:hover {
@@ -366,6 +502,19 @@
             transform: scale(1.1);
         }
 
+        /* Loading State */
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: #475569;
+        }
+
+        /* View All Link */
+        .view-all {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .nav-container {
@@ -420,12 +569,13 @@
                 <li><a href="products.html">Products</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section with Background Image and Overlay -->
+    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -460,6 +610,21 @@
         </div>
     </div>
 
+    <!-- Latest Products Section -->
+    <div class="container" id="latest-products">
+        <div class="section-header">
+            <h2>Latest Products</h2>
+            <div class="underline"></div>
+            <p style="margin-top: 1rem; color: #475569;">Check out our newest additions</p>
+        </div>
+        <div class="grid-3" id="latestProductsGrid">
+            <div class="loading">Loading products...</div>
+        </div>
+        <div class="view-all">
+            <a href="products.html" class="btn-outline">View All Products →</a>
+        </div>
+    </div>
+
     <!-- About Section -->
     <div class="container" id="about">
         <div class="about-section" style="padding: 2rem;">
@@ -483,6 +648,71 @@
                     <div style="font-size: 4rem;">🏪</div>
                     <h3 style="color: #0c4a6e; margin-top: 1rem;">ISO Certified</h3>
                     <p style="color: #1e40af;">Quality you can trust</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="container" id="faq">
+        <div class="section-header">
+            <h2>Frequently Asked Questions</h2>
+            <div class="underline"></div>
+            <p style="margin-top: 1rem; color: #475569;">Common questions about our products and services</p>
+        </div>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What is your minimum order quantity (MOQ) for bulk orders?</span>
+                    <span class="icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Our MOQ varies by product. For most pharmaceutical products, we require a minimum of 10 boxes per SKU. For hospitals and large institutions, we offer flexible terms. Contact us for specific product MOQ details.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Do you offer delivery across the Philippines?</span>
+                    <span class="icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Yes, we deliver nationwide! We have logistics partners covering Luzon, Visayas, and Mindanao. Delivery times range from 1-3 days for Metro Manila and 3-7 days for provincial areas.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Are your products FDA approved?</span>
+                    <span class="icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Absolutely. All our pharmaceutical products are registered with the Philippine Food and Drug Administration (FDA). We maintain strict quality control and only source from licensed manufacturers.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How can I request a price list or quotation?</span>
+                    <span class="icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Simply contact us via WhatsApp, email, or the contact form on this page. Our sales team will provide you with a detailed quotation based on your requirements and volume.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Do you offer discounts for regular bulk buyers?</span>
+                    <span class="icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    Yes, we offer tiered pricing and volume discounts for our regular B2B partners. Contact us to discuss a customized pricing structure for your business.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What payment methods do you accept?</span>
+                    <span class="icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    We accept bank transfers, GCash, and other major payment methods. For regular B2B partners, we also offer net payment terms upon approval.
                 </div>
             </div>
         </div>
@@ -557,6 +787,58 @@
             const contactSection = document.getElementById('contact');
             contactSection.scrollIntoView({ behavior: 'smooth' });
         });
+
+        // Load latest 3 products from JSON
+        async function loadLatestProducts() {
+            try {
+                const response = await fetch('product-data/products.json');
+                if (!response.ok) throw new Error('Failed to load products');
+                const allProducts = await response.json();
+                // Get latest 3 products (last 3 in array or first 3 depending on your data)
+                const latestProducts = allProducts.slice(-3).reverse();
+                renderLatestProducts(latestProducts);
+            } catch (error) {
+                console.error('Error loading products:', error);
+                document.getElementById('latestProductsGrid').innerHTML = '<div class="loading">Unable to load products. Please check back later.</div>';
+            }
+        }
+
+        function renderLatestProducts(products) {
+            const grid = document.getElementById('latestProductsGrid');
+            if (products.length === 0) {
+                grid.innerHTML = '<div class="loading">No products available.</div>';
+                return;
+            }
+            
+            grid.innerHTML = products.map(product => `
+                <div class="product-card">
+                    <div class="product-image">
+                        ${product.icon ? `<span style="font-size: 3rem;">${product.icon}</span>` : '💊'}
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">${product.category || 'Healthcare'}</span>
+                        <h3 class="product-title">${product.title}</h3>
+                        <p class="product-description">${product.description ? product.description.substring(0, 100) + (product.description.length > 100 ? '...' : '') : 'Premium quality pharmaceutical product.'}</p>
+                        <div class="product-footer">
+                            <span class="price">${product.price || 'Request Quote'}</span>
+                            <a href="https://wa.me/+639458749129?text=Hello!%20I'm%20interested%20in%20${encodeURIComponent(product.title)}" 
+                               target="_blank" class="btn-outline" style="padding: 0.25rem 0.75rem; font-size: 0.75rem;">Inquire</a>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-item').forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+
+        // Load products when page loads
+        loadLatestProducts();
     </script>
 </body>
 </html>
