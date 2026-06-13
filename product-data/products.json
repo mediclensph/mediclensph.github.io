@@ -7,5 +7,14 @@
         "keywords": ["kids mouth spray", "mouth spray for kids", "alcohol free", "sugar free", "chlorhexidine", "tutti frutti", "FDA approved", "GMP certified", "dentist recommended", "kids oral care"],
         "image": "mediclens-oral-spray.png",
         "price": "Contact-US"
+    },
+    {
+        "id": "prod002",
+        "title": "Easymate GCU 3-in-1 Multi-Monitoring System - Blood Glucose, Cholesterol, Uric Acid Tester Kit with Test Strips",
+        "category": "Medical Devices",
+        "description": "The Easymate GCU is a complete 3-in-1 multi-monitoring system that measures blood glucose, total cholesterol, and uric acid levels from a single blood sample. Ideal for home health monitoring, diabetic patients, and those managing cholesterol or gout. Comes with everything you need: lancing device, lancets, test strips, and control solution. Easy to use with large LCD display and memory storage. Trusted by healthcare professionals for accurate results in seconds. Perfect for seniors, clinics, and personal wellness tracking.",
+        "keywords": ["Easymate GCU", "blood glucose monitor", "cholesterol tester", "uric acid meter", "3-in-1 monitor", "diabetes testing kit", "cholesterol check", "gout test", "home health device", "multi-monitoring system", "glucose cholesterol uric acid", "FDA approved", "Philippines", "medical device"],
+        "image": "easymate.png",
+        "price": "Contact-US"
     }
 ]
