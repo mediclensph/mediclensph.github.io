@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="description" content="Medrew Pharmacy - Trusted pharmaceutical partner in the Philippines. Quality medicines, professional service, and reliable healthcare solutions for B2B and retail customers.">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    
     <title>Medrew Pharmacy | Trusted Healthcare Partner</title>
     <style>
         * {
@@ -110,6 +109,27 @@
             box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
         }
 
+        /* Shopee Button */
+        .btn-shopee {
+            background: linear-gradient(135deg, #ee4d2d 0%, #fb6e4a 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-shopee:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(238, 77, 45, 0.2);
+        }
+
         .btn-outline {
             background: transparent;
             color: #2563eb;
@@ -174,6 +194,13 @@
             max-width: 600px;
             margin: 0 auto 2rem;
             opacity: 0.95;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .hero-content {
@@ -254,7 +281,65 @@
             color: #475569;
         }
 
-        /* Product Card (for latest products) - matching products.html style */
+        /* Shopee Banner Section */
+        .shopee-section {
+            background: linear-gradient(135deg, #fff5f2 0%, #ffe8e0 100%);
+            border-radius: 1.5rem;
+            overflow: hidden;
+            margin-top: 2rem;
+        }
+
+        .shopee-banner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 3rem;
+        }
+
+        .shopee-content {
+            flex: 1;
+        }
+
+        .shopee-content h3 {
+            font-size: 1.8rem;
+            color: #ee4d2d;
+            margin-bottom: 0.5rem;
+        }
+
+        .shopee-content p {
+            color: #475569;
+            margin-bottom: 1.5rem;
+        }
+
+        .shopee-badge {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .shopee-badge span {
+            background: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            color: #ee4d2d;
+            font-weight: 500;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .shopee-icon {
+            flex-shrink: 0;
+            text-align: center;
+        }
+
+        .shopee-icon .large-icon {
+            font-size: 5rem;
+        }
+
+        /* Product Card */
         .product-card {
             background: white;
             border-radius: 1rem;
@@ -534,71 +619,89 @@
         }
 
         /* Responsive */
-@media (max-width: 768px) {
-    .nav-container {
-        flex-direction: column;
-        text-align: center;
-        padding: 1rem;
-    }
-    
-    .logo {
-        justify-content: center;
-        width: 100%;
-    }
-    
-    .nav-links {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
-    
-    .nav-links li {
-        width: auto;
-    }
-    
-    .hero {
-        min-height: 70vh;
-    }
-    
-    .hero h1 {
-        font-size: 2rem;
-    }
-    
-    .hero p {
-        font-size: 0.95rem;
-        padding: 0 1rem;
-    }
-    
-    .hero-content {
-        padding: 1rem;
-    }
-    
-    .about-grid,
-    .contact-map-section {
-        grid-template-columns: 1fr;
-    }
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                text-align: center;
+                padding: 1rem;
+            }
+            
+            .logo {
+                justify-content: center;
+                width: 100%;
+            }
+            
+            .nav-links {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            
+            .nav-links li {
+                width: auto;
+            }
+            
+            .hero {
+                min-height: 70vh;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 0.95rem;
+                padding: 0 1rem;
+            }
+            
+            .hero-content {
+                padding: 1rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .shopee-banner {
+                flex-direction: column;
+                text-align: center;
+                padding: 2rem;
+            }
+            
+            .shopee-content h3 {
+                font-size: 1.5rem;
+            }
+            
+            .shopee-badge {
+                justify-content: center;
+            }
+            
+            .about-grid,
+            .contact-map-section {
+                grid-template-columns: 1fr;
+            }
 
-    .map-container {
-        min-height: 300px;
-    }
-    
-    .container {
-        padding: 2rem 1rem;
-    }
-    
-    /* Fix for WhatsApp button on mobile */
-    .whatsapp-float {
-        bottom: 15px;
-        right: 15px;
-        width: 50px;
-        height: 50px;
-    }
-    
-    .whatsapp-float svg {
-        width: 24px;
-        height: 24px;
-    }
-}
+            .map-container {
+                min-height: 300px;
+            }
+            
+            .container {
+                padding: 2rem 1rem;
+            }
+            
+            .whatsapp-float {
+                bottom: 15px;
+                right: 15px;
+                width: 50px;
+                height: 50px;
+            }
+            
+            .whatsapp-float svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -629,7 +732,12 @@
         <div class="hero-content">
             <h1>Quality Medicines,<br>Trusted Care</h1>
             <p>Medrew Pharmacy provides premium pharmaceutical products and healthcare solutions for businesses and families across the Philippines.</p>
-            <a href="#contact" class="btn-primary" id="getInTouchBtn">Get in Touch →</a>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn-primary" id="getInTouchBtn">Wholesale Inquiry →</a>
+                <a href="https://shopee.ph/medrewspharmacy" target="_blank" rel="noopener noreferrer" class="btn-shopee">
+                    <span>🛒</span> Shop on Shopee →
+                </a>
+            </div>
         </div>
     </section>
 
@@ -654,6 +762,31 @@
                 <div class="card-icon">🚚</div>
                 <h3>Fast Delivery</h3>
                 <p>Temperature-controlled logistics ensuring your medicines arrive in perfect condition.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shopee Store CTA Section -->
+    <div class="container">
+        <div class="shopee-section">
+            <div class="shopee-banner">
+                <div class="shopee-content">
+                    <h3>🛍️ Shop Retail on Shopee</h3>
+                    <p>Looking for single items or small quantity purchases? Visit our official Shopee store for retail orders, exclusive deals, and convenient checkout.</p>
+                    <div class="shopee-badge">
+                        <span>✓ 100% Authentic</span>
+                        <span>✓ Fast Shipping</span>
+                        <span>✓ COD Available</span>
+                        <span>✓ Shopee Guarantee</span>
+                    </div>
+                    <a href="https://shopee.ph/medrewspharmacy" target="_blank" rel="noopener noreferrer" class="btn-shopee" style="margin-top: 1.5rem; display: inline-flex;">
+                        <span>🛒</span> Visit Our Shopee Store →
+                    </a>
+                </div>
+                <div class="shopee-icon">
+                    <div class="large-icon">🛍️</div>
+                    <div style="font-weight: 700; color: #ee4d2d; margin-top: 0.5rem;">shopee.ph/medrewspharmacy</div>
+                </div>
             </div>
         </div>
     </div>
@@ -836,13 +969,12 @@
             contactSection.scrollIntoView({ behavior: 'smooth' });
         });
 
-        // Load latest 3 products from JSON - matching products.html style
+        // Load latest 3 products from JSON
         async function loadLatestProducts() {
             try {
                 const response = await fetch('product-data/products.json');
                 if (!response.ok) throw new Error('Failed to load products');
                 const allProducts = await response.json();
-                // Get latest 3 products (last 3 in array)
                 const latestProducts = allProducts.slice(-3).reverse();
                 renderLatestProducts(latestProducts);
             } catch (error) {
@@ -859,7 +991,6 @@
             }
             
             grid.innerHTML = products.map(product => {
-                // Handle image path correctly - same as products.html
                 let imageSrc = '';
                 if (product.image) {
                     imageSrc = product.image.startsWith('images/') ? product.image : 'images/' + product.image;
@@ -868,10 +999,7 @@
                 return `
                 <div class="product-card">
                     <div class="product-image">
-                        ${imageSrc ? 
-                            `<img src="${imageSrc}" alt="${product.title}">` : 
-                            ''
-                        }
+                        ${imageSrc ? `<img src="${imageSrc}" alt="${product.title}">` : ''}
                     </div>
                     <div class="product-info">
                         <span class="product-category">${product.category || 'Healthcare'}</span>
@@ -895,7 +1023,6 @@
             });
         });
 
-        // Load products when page loads
         loadLatestProducts();
     </script>
 </body>
