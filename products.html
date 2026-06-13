@@ -88,6 +88,27 @@
             color: #0ea5e9;
         }
 
+        /* Shopee Button */
+        .btn-shopee {
+            background: linear-gradient(135deg, #ee4d2d 0%, #fb6e4a 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-shopee:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(238, 77, 45, 0.2);
+        }
+
         .container {
             max-width: 1280px;
             margin: 0 auto;
@@ -224,6 +245,65 @@
             font-size: 0.9rem;
         }
 
+        /* Shopee Banner Section */
+        .shopee-section {
+            background: linear-gradient(135deg, #fff5f2 0%, #ffe8e0 100%);
+            border-radius: 1.5rem;
+            overflow: hidden;
+            margin-top: 3rem;
+        }
+
+        .shopee-banner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 3rem;
+        }
+
+        .shopee-content {
+            flex: 1;
+        }
+
+        .shopee-content h3 {
+            font-size: 1.8rem;
+            color: #ee4d2d;
+            margin-bottom: 0.5rem;
+        }
+
+        .shopee-content p {
+            color: #475569;
+            margin-bottom: 1.5rem;
+        }
+
+        .shopee-badge {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .shopee-badge span {
+            background: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            color: #ee4d2d;
+            font-weight: 500;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .shopee-icon {
+            flex-shrink: 0;
+            text-align: center;
+        }
+
+        .shopee-icon .large-icon {
+            font-size: 5rem;
+        }
+
         .loading, .error {
             text-align: center;
             padding: 4rem;
@@ -286,71 +366,62 @@
         }
 
         /* Responsive */
-@media (max-width: 768px) {
-    .nav-container {
-        flex-direction: column;
-        text-align: center;
-        padding: 1rem;
-    }
-    
-    .logo {
-        justify-content: center;
-        width: 100%;
-    }
-    
-    .nav-links {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
-    
-    .nav-links li {
-        width: auto;
-    }
-    
-    .hero {
-        min-height: 70vh;
-    }
-    
-    .hero h1 {
-        font-size: 2rem;
-    }
-    
-    .hero p {
-        font-size: 0.95rem;
-        padding: 0 1rem;
-    }
-    
-    .hero-content {
-        padding: 1rem;
-    }
-    
-    .about-grid,
-    .contact-map-section {
-        grid-template-columns: 1fr;
-    }
-
-    .map-container {
-        min-height: 300px;
-    }
-    
-    .container {
-        padding: 2rem 1rem;
-    }
-    
-    /* Fix for WhatsApp button on mobile */
-    .whatsapp-float {
-        bottom: 15px;
-        right: 15px;
-        width: 50px;
-        height: 50px;
-    }
-    
-    .whatsapp-float svg {
-        width: 24px;
-        height: 24px;
-    }
-}
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                text-align: center;
+                padding: 1rem;
+            }
+            
+            .logo {
+                justify-content: center;
+                width: 100%;
+            }
+            
+            .nav-links {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            
+            .nav-links li {
+                width: auto;
+            }
+            
+            .container {
+                padding: 2rem 1rem;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .shopee-banner {
+                flex-direction: column;
+                text-align: center;
+                padding: 2rem;
+            }
+            
+            .shopee-content h3 {
+                font-size: 1.5rem;
+            }
+            
+            .shopee-badge {
+                justify-content: center;
+            }
+            
+            .whatsapp-float {
+                bottom: 15px;
+                right: 15px;
+                width: 50px;
+                height: 50px;
+            }
+            
+            .whatsapp-float svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -384,6 +455,29 @@
         <div class="filter-bar" id="filterBar"></div>
         <div class="products-grid" id="productsGrid">
             <div class="loading">Loading products...</div>
+        </div>
+
+        <!-- Shopee Store CTA Section -->
+        <div class="shopee-section">
+            <div class="shopee-banner">
+                <div class="shopee-content">
+                    <h3>🛍️ Shop Retail on Shopee</h3>
+                    <p>Looking for single items or small quantity purchases? Visit our official Shopee store for retail orders, exclusive deals, and convenient checkout.</p>
+                    <div class="shopee-badge">
+                        <span>✓ 100% Authentic</span>
+                        <span>✓ Fast Shipping</span>
+                        <span>✓ COD Available</span>
+                        <span>✓ Shopee Guarantee</span>
+                    </div>
+                    <a href="https://shopee.ph/medrewspharmacy" target="_blank" rel="noopener noreferrer" class="btn-shopee" style="margin-top: 1.5rem; display: inline-flex;">
+                        <span>🛒</span> Visit Our Shopee Store →
+                    </a>
+                </div>
+                <div class="shopee-icon">
+                    <div class="large-icon">🛍️</div>
+                    <div style="font-weight: 700; color: #ee4d2d; margin-top: 0.5rem;">shopee.ph/medrewspharmacy</div>
+                </div>
+            </div>
         </div>
     </div>
 
