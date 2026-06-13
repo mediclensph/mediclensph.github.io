@@ -10,11 +10,20 @@
     },
     {
         "id": "prod002",
-        "title": "Easymate GCU 3-in-1 Multi-Monitoring System - Blood Glucose, Cholesterol, Uric Acid Tester Kit with Test Strips",
-        "category": "Medical Devices",
-        "description": "The Easymate GCU is a complete 3-in-1 multi-monitoring system that measures blood glucose, total cholesterol, and uric acid levels from a single blood sample. Ideal for home health monitoring, diabetic patients, and those managing cholesterol or gout. Comes with everything you need: lancing device, lancets, test strips, and control solution. Easy to use with large LCD display and memory storage. Trusted by healthcare professionals for accurate results in seconds. Perfect for seniors, clinics, and personal wellness tracking.",
-        "keywords": ["Easymate GCU", "blood glucose monitor", "cholesterol tester", "uric acid meter", "3-in-1 monitor", "diabetes testing kit", "cholesterol check", "gout test", "home health device", "multi-monitoring system", "glucose cholesterol uric acid", "FDA approved", "Philippines", "medical device"],
-        "image": "easymate.png",
+        "title": "Povipure Povidone-Iodine 10% Solution - Antiseptic Disinfectant for Wound Care and Skin Infections (1 Gallon)",
+        "category": "Antiseptics & Disinfectants",
+        "description": "Povipure Povidone-Iodine 10% Solution is a trusted antiseptic and disinfectant that kills 99.99% of germs and stops infection. Each mL contains 100 mg Povidone-Iodine equivalent to 10 mg available iodine. Indicated for prevention and treatment of skin infections, disinfection of wounds, cuts, abrasions, and burns. Also used for pre and post-operative disinfection and preoperative skin preparation of patients. Gentle on wounds and skin while providing powerful infection protection. Ideal for hospitals, clinics, healthcare facilities, and home first aid kits. Available in 1 Gallon size for professional and institutional use.",
+        "keywords": ["povidone iodine", "Povipure", "antiseptic", "disinfectant", "wound care", "skin infection treatment", "preoperative skin preparation", "iodine solution 10%", "germ killer", "hospital grade antiseptic", "post-operative care", "cuts and abrasions", "burns treatment", "first aid", "MEDREWS PHARMACY"],
+        "image": "povidone.jpg",
+        "price": "Contact-US"
+    },
+    {
+        "id": "prod003",
+        "title": "Mediclens Antimicrobial Soap with Chlorhexidine and Aloe Vera - Antibacterial Body Wash for Daily Protection 250mL",
+        "category": "Personal Care",
+        "description": "Mediclens Antimicrobial Soap combines the powerful antibacterial properties of Chlorhexidine with the soothing, moisturizing benefits of Aloe Vera. This gentle yet effective body wash kills 99.9% of germs and bacteria while keeping your skin soft and hydrated. Ideal for daily use, post-surgery care, and maintaining overall skin hygiene. Dermatologist-tested, pH-balanced, and suitable for the whole family. Free from harsh chemicals, parabens, and artificial dyes. Perfect for healthcare workers, active individuals, and anyone seeking superior skin protection.",
+        "keywords": ["Mediclens antimicrobial soap", "chlorhexidine soap", "aloe vera soap", "antibacterial body wash", "germ killing soap", "antiseptic soap", "hospital grade soap", "skin protection", "daily antibacterial wash", "post surgery care", "gentle antibacterial", "family soap", "FDA approved", "Philippines"],
+        "image": "soap.jpg",
         "price": "Contact-US"
     }
 ]
