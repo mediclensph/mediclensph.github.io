@@ -32,7 +32,7 @@
         "category": "Antiseptics & Disinfectants",
         "description": "Mediclens Chlorhexidine Gluconate 0.5% Antiseptic Solution is a fast-acting, alcohol-free antiseptic that kills germs without the sting. Ideal for wound cleansing, pre-surgical skin preparation, and daily antiseptic protection. Alcohol-free formulation means no burning sensation on open wounds or sensitive skin. Trusted by healthcare professionals for effective germ protection. Suitable for hospitals, clinics, and home first aid use. Gentle enough for regular use on all skin types.",
         "keywords": ["chlorhexidine gluconate", "antiseptic solution", "alcohol free antiseptic", "no stinging antiseptic", "wound care", "skin disinfection", "hospital grade antiseptic", "gentle antiseptic", "Mediclens", "Bacolod", "Philippines"],
-        "image": "chlorhexidine-solution.jpg",
+        "image": "chlorhexidine-gluconate-medrews.png",
         "price": "Contact-US"
     },
     {
@@ -41,7 +41,7 @@
         "category": "Personal Care",
         "description": "Mediclens Chlorhexidine Body Scrub is a powerful antibacterial cleanser formulated with Chlorhexidine Gluconate to help remove 99.9% of bacteria from all skin surfaces. Ideal for pre-surgical body prep, post-operative care, and daily antibacterial cleansing. Gentle enough for regular use while providing superior germ protection. Helps prevent skin infections and promotes overall skin hygiene. Perfect for healthcare workers, patients, and anyone needing advanced skin protection.",
         "keywords": ["chlorhexidine body scrub", "antibacterial body cleanser", "surgical scrub", "preoperative wash", "chlorhexidine gluconate wash", "skin disinfection", "hospital grade body wash", "Mediclens", "Bacolod", "Philippines"],
-        "image": "body-scrub.jpg",
+        "image": "medrews-body-scrub.png",
         "price": "Contact-US"
     },
     {
@@ -50,7 +50,7 @@
         "category": "Personal Care",
         "description": "Mediclens Feminine Wash OB is specially formulated with Chlorhexidine Gluconate for gentle yet effective intimate hygiene. Helps maintain natural pH balance while providing antibacterial protection against odor-causing bacteria. Alcohol-free, mild, and dermatologist-tested. Safe for daily use. OB formula trusted by healthcare professionals. Provides freshness and confidence with every wash.",
         "keywords": ["feminine wash", "intimate wash", "chlorhexidine feminine wash", "OB wash", "antibacterial feminine hygiene", "pH balanced wash", "women's health", "gentle intimate cleanser", "Mediclens", "Bacolod", "Philippines"],
-        "image": "feminine-wash.jpg",
+        "image": "medrews-feminine-wash.png",
         "price": "Contact-US"
     },
     {
@@ -59,7 +59,7 @@
         "category": "Oral Care",
         "description": "Mediclens Adult Oral Spray with Chlorhexidine provides effective, alcohol-free breath freshening and oral care for adults. Helps reduce plaque-causing bacteria, freshens breath instantly, and promotes overall oral hygiene. No alcohol means no burning or stinging sensation. Perfect for daily use at home, work, or on-the-go. Dentist-recommended formulation for adult oral health. Convenient spray format for easy application.",
         "keywords": ["adult oral spray", "chlorhexidine spray", "alcohol free mouth spray", "breath freshener", "oral care spray", "gum health", "antibacterial oral spray", "Mediclens", "Bacolod", "Philippines"],
-        "image": "adult-oral-spray.jpg",
+        "image": "medrews-oral-spray-adult.png",
         "price": "Contact-US"
     },
     {
@@ -68,7 +68,7 @@
         "category": "Antiseptics & Disinfectants",
         "description": "Mediclens+ Corub Antiseptic Solution combines the proven germ-killing power of Chlorhexidine Gluconate with fast-acting Ethyl Alcohol for superior disinfection. Kills 99.9% of germs quickly while providing lasting protection. Ideal for hand sanitizing, surface disinfection, and wound cleansing. Powerful yet gentle formula. Trusted by healthcare professionals for effective infection control. Perfect for hospitals, clinics, and everyday use.",
         "keywords": ["chlorhexidine alcohol solution", "antiseptic disinfectant", "hand sanitizer", "surface disinfectant", "germ killer", "hospital grade antiseptic", "corub", "Mediclens", "Bacolod", "Philippines"],
-        "image": "corub.jpg",
+        "image": "medrews-plus.png",
         "price": "Contact-US"
     },
     {
@@ -77,7 +77,7 @@
         "category": "Personal Care",
         "description": "Mediclens Ketoconazole Shampoo is a medicated anti-dandruff shampoo formulated to treat and prevent dandruff, seborrheic dermatitis, and scalp fungal infections. With Ketoconazole as its active ingredient, this shampoo effectively eliminates flaking, itching, and redness. Gentle enough for regular use while providing powerful therapeutic results. Helps restore scalp health and maintain clean, healthy hair. Trusted by dermatologists for effective dandruff treatment.",
         "keywords": ["ketoconazole shampoo", "anti-dandruff shampoo", "medicated shampoo", "seborrheic dermatitis treatment", "scalp infection", "fungal infection treatment", "dandruff control", "Mediclens", "Bacolod", "Philippines"],
-        "image": "ketoconazole-shampoo.jpg",
+        "image": "medrews_shampoo.png",
         "price": "Contact-US"
     },
     {
@@ -86,16 +86,16 @@
         "category": "Pet Care",
         "description": "Mediclens Vet Shampoo is specially formulated with Chlorhexidine Gluconate to provide antibacterial and antifungal protection for dogs and cats. Helps treat and prevent skin infections, hot spots, and fungal conditions in pets. Gentle on pet skin while effectively killing harmful germs. Suitable for regular use on all breeds. Veterinarian-recommended formula for optimal pet hygiene and skin health. Keeps your furry friends clean, fresh, and protected.",
         "keywords": ["pet shampoo", "dog shampoo", "cat shampoo", "chlorhexidine pet shampoo", "antibacterial pet wash", "antifungal pet shampoo", "veterinary shampoo", "pet skin care", "hot spots treatment", "Mediclens", "Bacolod", "Philippines"],
-        "image": "vet-shampoo.jpg",
+        "image": "medrews-vet-shampoo.png",
         "price": "Contact-US"
     },
     {
         "id": "prod011",
-        "title": "Povipure Povidone-Iodine 10% Antiseptic Solution - Effective Disinfectant for Wounds, Cuts & Skin Infections (500mL)",
+        "title": "Povipure Povidone-Iodine 10% Antiseptic Solution - Effective Disinfectant for Wounds, Cuts & Skin Infections (1 gallon)",
         "category": "Antiseptics & Disinfectants",
         "description": "Povipure Povidone-Iodine 10% Antiseptic Solution is a trusted disinfectant that kills 99.99% of germs and prevents infection. Used for wound cleansing, skin disinfection, and pre/post-operative care. Fast-acting, broad-spectrum germ protection. Gentle on skin while providing powerful antiseptic action. Ideal for hospitals, clinics, and home first aid kits. Trusted by healthcare professionals worldwide for effective infection control.",
         "keywords": ["povidone iodine", "antiseptic solution", "wound disinfectant", "skin infection prevention", "preoperative antiseptic", "germ killer", "iodine solution 10%", "Povipure", "Bacolod", "Philippines"],
-        "image": "povipure.jpg",
+        "image": "povipure-medrews.png",
         "price": "Contact-US"
     }
 ]
